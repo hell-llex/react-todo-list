@@ -20,11 +20,33 @@
   .container-input {
     height: 100%;
     width: 100%;
-    min-width: 20rem;
+    min-width: 16rem;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
     gap: 1vh;
+  }
+}
+
+@media (max-width: 768px) {
+  .create-panel {
+    flex-direction: column;
+    gap: 1vh;
+
+    .container-btn {
+      width: 100%;
+      flex-direction: row;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      gap: 2vw;
+    }
+  }
+}
+
+@media (max-width: 550px) {
+  .create-panel {
+    height: 100%;
+    width: 100%;
   }
 }

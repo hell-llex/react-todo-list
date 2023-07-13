@@ -20,3 +20,15 @@
   font-size: 4vw;
   font-weight: 500;
 }
+
+@media (max-width: 768px) {
+  .todo-list {
+    padding: 28vh 2rem 2rem 2rem;
+  }
+}
+
+@media (max-width: 550px) {
+  .todo-list {
+    padding: 36vh 2rem 2rem 2rem;
+  }
+}

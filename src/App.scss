@@ -48,3 +48,17 @@ body {
   gap: 5vh;
   overflow: hidden;
 }
+
+@media (max-width: 1024px) {
+  html {
+    font-size: 8px;
+  }
+}
+
+
+@media (max-width: 550px) {
+  .wrapper {
+    height: 94vh;
+    width: 80vw;
+  }
+}

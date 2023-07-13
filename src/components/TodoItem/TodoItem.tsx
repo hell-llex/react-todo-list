@@ -142,7 +142,10 @@ const TodoItem = ({ itemInfo }: { itemInfo: ITodoItem }) => {
                   />
                 </Tooltip>
                 <Tooltip title="Remove">
-                  <Button icon={<DeleteFilled />} onClick={removeItem} />
+                  <Button
+                    icon={<DeleteFilled />}
+                    onClick={removeItem}
+                  />
                 </Tooltip>
               </Space>
             )}
@@ -151,10 +154,10 @@ const TodoItem = ({ itemInfo }: { itemInfo: ITodoItem }) => {
               value={rating}
               onChange={(e) => setRating(e)}
               character={
-                <ExclamationCircleFilled style={{ fontSize: '22px' }} />
+                <ExclamationCircleFilled style={{ fontSize: '2.2rem' }} />
               }
             />
-            <Text>
+            <Text className="time">
               {new Date(itemInfo.date).toLocaleDateString('ru-RU', {
                 hour: 'numeric',
                 minute: 'numeric',
