@@ -1,0 +1,159 @@
+.container-todo {
+  position: relative;
+  list-style: none;
+  width: 100%;
+}
+
+.todo-item {
+  position: relative;
+  padding: 0.5rem 2rem;
+  width: 100%;
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1;
+  border-radius: 15px;
+  background-color: whitesmoke;
+  transition: all 0.2s ease-in-out;
+
+  & label {
+    margin: 1rem;
+  }
+
+  .container-text {
+    padding: 1rem 0;
+    height: 100%;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    transition: all 0.3s ease-in-out;
+    text-align: start;
+
+    .title {
+      font-size: 2.2rem;
+      font-weight: 400;
+    }
+
+    .text {
+      font-size: 1.4rem;
+      font-weight: 300;
+    }
+  }
+
+  .container-btn {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 0.5rem;
+    transition: all 0.3s ease-in-out;
+    border-radius: 1rem;
+    padding: 1rem;
+    background: #e0e0e0;
+
+    .time {
+      font-size: 1.4rem;
+      font-weight: 300;
+    }
+  }
+
+  &:hover {
+    transform: scale(1.03);
+    transition: all 0.2s ease-in-out;
+  }
+
+  &.editing {
+    position: relative;
+    z-index: 3;
+    transform: scale(1.03);
+
+    &:hover {
+      transform: scale(1.03);
+    }
+
+    .container-text {
+      height: auto;
+    }
+  }
+}
+
+.modal-wrap {
+  position: fixed;
+  background: rgba(31, 31, 31, 0.3);
+  backdrop-filter: blur(5px);
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100vw;
+  height: 100vh;
+  opacity: 0;
+  transform: scale(1);
+  background: rgba(31, 31, 31, 0.3);
+  backdrop-filter: blur(5px);
+  transition: all 0.3s ease-in-out;
+  pointer-events: none;
+  overflow-y: hidden;
+  
+
+  &.active {
+    pointer-events: all;
+    opacity: 1;
+    z-index: 2;
+    transition: all 0.3s ease-in-out;
+  }
+}
+
+@media (max-width: 768px) {
+  .todo-item {
+    padding: 2rem 1.5rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+
+    .container-text {
+      padding: 1rem 0;
+      height: 60%;
+      width: 90%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      align-items: flex-start;
+      transition: all 0.3s ease-in-out;
+      text-align: start;
+
+      .title {
+        font-size: 2.2rem;
+        font-weight: 400;
+      }
+
+      .text {
+        height: 100%;
+        font-size: 1.4rem;
+        font-weight: 300;
+      }
+    }
+
+    .container-btn {
+      width: 100%;
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: space-evenly;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1vw;
+      transition: all 0.3s ease-in-out;
+
+      .time {
+        font-size: 1.4rem;
+        font-weight: 300;
+      }
+    }
+  }
+}
