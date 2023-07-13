@@ -22,15 +22,19 @@ const CreateTodoItem = () => {
   };
 
   const onFinish = () => {
-    addTodo({
+    const newTodoItem = {
       id: new Date().toISOString(),
-      title: title,
-      text: text,
+      title: title.length > 0 ? title : 'Lorem ipsum dolor.',
+      text:
+        title.length > 0 || text.length > 0
+          ? text
+          : 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit quis, eveniet dolor iure exercitationem sed sunt repudiandae eius voluptas, natus vero aperiam id eum cumque laboriosam excepturi esse sapiente quo.',
       date: new Date().toISOString(),
       rating: rating,
       done: false,
       visible: true,
-    });
+    };
+    addTodo(newTodoItem);
     resetForm();
   };
 
