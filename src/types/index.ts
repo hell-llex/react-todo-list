@@ -2,10 +2,8 @@ export interface ITodoItem {
   text: string;
   title: string;
   done: boolean;
-  id: number;
+  id: string;
   rating: number;
-}
-
-export interface ITodoList {
-  items: ITodoItem[];
+  date: string;
+  visible: boolean;
 }
