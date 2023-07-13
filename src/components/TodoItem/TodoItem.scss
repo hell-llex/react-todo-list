@@ -73,6 +73,10 @@
     &:hover {
       transform: scale(1.03);
     }
+
+    .container-text {
+      height: auto;
+    }
   }
 }
 
@@ -91,10 +95,11 @@
   background: rgba(31, 31, 31, 0.3);
   backdrop-filter: blur(5px);
   transition: all 0.3s ease-in-out;
-  pointer-events: none;
+  // pointer-events: none;
+  overflow-y: hidden;
 
   &.active {
-    pointer-events: all;
+    // pointer-events: all;
     opacity: 1;
     z-index: 2;
     transition: all 0.3s ease-in-out;
@@ -112,7 +117,7 @@
 
     .container-text {
       padding: 1rem 0;
-      height: 40%;
+      height: 60%;
       width: 90%;
       display: flex;
       flex-direction: column;
@@ -127,6 +132,7 @@
       }
 
       .text {
+        height: 100%;
         font-size: 1.4rem;
         font-weight: 300;
       }

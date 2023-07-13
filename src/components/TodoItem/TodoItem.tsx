@@ -99,7 +99,7 @@ const TodoItem = ({ itemInfo }: { itemInfo: ITodoItem }) => {
                   value={text}
                   onChange={(e) => setText(e.target.value)}
                   bordered={false}
-                  autoSize={{ minRows: 1, maxRows: 2 }}
+                  autoSize={{ minRows: 1, maxRows: 4 }}
                   maxLength={600}
                 />
               </>
@@ -136,7 +136,7 @@ const TodoItem = ({ itemInfo }: { itemInfo: ITodoItem }) => {
               <Space wrap>
                 <Tooltip title="Edit">
                   <Button
-                    type={onEditingTodo ? 'primary' : 'dashed'}
+                    type={'dashed'}
                     icon={<EditFilled />}
                     onClick={() => setOnEditingTodo(true)}
                   />

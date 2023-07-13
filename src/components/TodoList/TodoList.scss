@@ -9,7 +9,11 @@
   align-items: center;
   gap: 1vh;
   border-radius: 20px;
-  overflow-x: auto;
+  overflow: auto;
+
+  &:has(.todo-item.editing) {
+    overflow: hidden;
+  }
 
   &::-webkit-scrollbar {
     display: none;

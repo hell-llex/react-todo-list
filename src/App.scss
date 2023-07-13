@@ -46,7 +46,6 @@ body {
   justify-content: flex-start;
   align-items: center;
   gap: 5vh;
-  transform: translateY(-2%);
   overflow: hidden;
 }
 
@@ -61,6 +60,6 @@ body {
   .wrapper {
     height: 84vh;
     width: 80vw;
-    transform: translateY(-5%);
+    margin-bottom: 5%;
   }
 }
