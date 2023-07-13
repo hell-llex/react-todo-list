@@ -8,35 +8,7 @@ const initialState: {
     visible: string;
   };
 } = {
-  items: [
-    {
-      id: '1',
-      title: 'Add',
-      text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit sed laborum voluptas aspernatur optio aliquid ullam ut commodi repellendus nostrum natus recusandae hic, sapiente omnis! Voluptatum corrupti labore molestiae voluptate.',
-      done: false,
-      rating: 2,
-      date: new Date().toISOString(),
-      visible: true,
-    },
-    {
-      id: '2',
-      title: 'Add',
-      text: 'Add Components Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit sed laborum voluptas aspernatur optio aliquid ullam ut commodi repellendus nostrum natus recusandae hic, sapiente omnis! Voluptatum corrupti labore molestiae voluptate.',
-      done: false,
-      rating: 4,
-      date: new Date().toISOString(),
-      visible: true,
-    },
-    {
-      id: '3',
-      title: 'Add',
-      text: 'Add Redux Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit sed laborum voluptas aspernatur optio aliquid ullam ut commodi repellendus nostrum natus recusandae hic, sapiente omnis! Voluptatum corrupti labore molestiae voluptate.',
-      done: true,
-      rating: 3,
-      date: new Date().toISOString(),
-      visible: true,
-    },
-  ],
+  items: [],
   sorted: {
     sorting: '',
     visible: '',

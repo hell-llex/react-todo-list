@@ -10,6 +10,7 @@ const ControlsBar = () => {
   const todosList = useAppSelector((state) => state.todoList.items);
   const dispatch = useAppDispatch();
   const sortTodos = (item: string) => dispatch(sortedTodoList(item));
+  const visibleItem = useAppSelector((state) => state.todoList.sorted.visible);
 
   return (
     <div className={`controls-bar ${visibleMenu ? 'active' : ''}`}>
@@ -33,7 +34,7 @@ const ControlsBar = () => {
           ]}
         />
         <Select
-          defaultValue="all"
+          defaultValue={visibleItem.length !== 0 ? visibleItem : 'all'}
           style={{ width: 140 }}
           onChange={sortTodos}
           options={[
