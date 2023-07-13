@@ -1,16 +1,18 @@
 import './ControlsBar.scss';
 import CreateTodoItem from '../CreateTodoItem/CreateTodoItem';
-import { Select } from 'antd';
+import { Button, Select } from 'antd';
 import { useAppDispatch, useAppSelector } from '../../hooks/redux';
 import { sortedTodoList } from '../../store/slice/todolist';
+import { useState } from 'react';
 
 const ControlsBar = () => {
+  const [visibleMenu, setVisibleMenu] = useState(false);
   const todosList = useAppSelector((state) => state.todoList.items);
   const dispatch = useAppDispatch();
   const sortTodos = (item: string) => dispatch(sortedTodoList(item));
 
   return (
-    <div className="controls-bar">
+    <div className={`controls-bar ${visibleMenu ? 'active' : ''}`}>
       <CreateTodoItem />
       <div className="container-sort">
         <Select
@@ -51,6 +53,14 @@ const ControlsBar = () => {
           ]}
         />
       </div>
+      <Button
+        type="primary"
+        block
+        className="menu-btn"
+        onClick={() => setVisibleMenu(!visibleMenu)}
+      >
+        Open Menu
+      </Button>
     </div>
   );
 };
