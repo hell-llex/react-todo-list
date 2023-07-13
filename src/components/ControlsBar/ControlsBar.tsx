@@ -34,7 +34,9 @@ const ControlsBar = () => {
           ]}
         />
         <Select
-          defaultValue={visibleItem.length !== 0 ? visibleItem : 'all'}
+          value={
+            visibleItem.length !== 0 ? visibleItem : `All / ${todosList.length}`
+          }
           style={{ width: 140 }}
           onChange={sortTodos}
           options={[
