@@ -13,7 +13,7 @@ const ControlsBar = () => {
   const visibleItem = useAppSelector((state) => state.todoList.sorted.visible);
 
   return (
-    <div className={`controls-bar ${visibleMenu ? 'active' : ''}`}>
+    <div className={`controls-bar ${visibleMenu ? '' : 'active'}`}>
       <CreateTodoItem />
       <div className="container-sort">
         <Select
@@ -62,7 +62,7 @@ const ControlsBar = () => {
         className="menu-btn"
         onClick={() => setVisibleMenu(!visibleMenu)}
       >
-        Open Menu
+        {visibleMenu ? 'Close Menu' : 'Open Menu'}
       </Button>
     </div>
   );

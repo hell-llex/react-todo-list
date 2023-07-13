@@ -28,7 +28,7 @@ import Paragraph from 'antd/es/typography/Paragraph';
 import Title from 'antd/es/typography/Title';
 
 const TodoItem = ({ itemInfo }: { itemInfo: ITodoItem }) => {
-  const [todoItem, setTodoItem] = useState(itemInfo);
+  const [todoItem] = useState(itemInfo);
   const [checked, setChecked] = useState(todoItem.done);
   const [onEditingTodo, setOnEditingTodo] = useState(false);
   const [title, setTitle] = useState(todoItem.title);
