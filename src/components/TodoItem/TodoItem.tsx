@@ -18,11 +18,7 @@ import {
 } from 'antd';
 const { Text } = Typography;
 import type { CheckboxChangeEvent } from 'antd/es/checkbox';
-import {
-  DeleteFilled,
-  EditFilled,
-  ExclamationCircleFilled,
-} from '@ant-design/icons';
+import { DeleteFilled, EditFilled, FireFilled } from '@ant-design/icons';
 import TextArea from 'antd/es/input/TextArea';
 import Paragraph from 'antd/es/typography/Paragraph';
 import Title from 'antd/es/typography/Title';
@@ -142,10 +138,7 @@ const TodoItem = ({ itemInfo }: { itemInfo: ITodoItem }) => {
                   />
                 </Tooltip>
                 <Tooltip title="Remove">
-                  <Button
-                    icon={<DeleteFilled />}
-                    onClick={removeItem}
-                  />
+                  <Button icon={<DeleteFilled />} onClick={removeItem} />
                 </Tooltip>
               </Space>
             )}
@@ -153,9 +146,7 @@ const TodoItem = ({ itemInfo }: { itemInfo: ITodoItem }) => {
               disabled={onEditingTodo ? false : true}
               value={rating}
               onChange={(e) => setRating(e)}
-              character={
-                <ExclamationCircleFilled style={{ fontSize: '2.2rem' }} />
-              }
+              character={<FireFilled style={{ fontSize: '2.2rem' }} />}
             />
             <Text className="time">
               {new Date(itemInfo.date).toLocaleDateString('ru-RU', {

@@ -1,5 +1,5 @@
 import './CreateTodoItem.scss';
-import { ExclamationCircleFilled } from '@ant-design/icons';
+import { FireFilled } from '@ant-design/icons';
 import { Button, Input, Rate, Space } from 'antd';
 import TextArea from 'antd/es/input/TextArea';
 import { useState } from 'react';
@@ -58,17 +58,19 @@ const CreateTodoItem = () => {
       </div>
 
       <div className="container-btn">
-        <Rate
-          value={rating}
-          onChange={(e) => setRating(e)}
-          character={<ExclamationCircleFilled style={{ fontSize: '2.2rem' }} />}
-        />
+        <div className="container-rate">
+          <Rate
+            value={rating}
+            onChange={(e) => setRating(e)}
+            character={<FireFilled style={{ fontSize: '22px' }} />}
+          />
+        </div>
         <Space direction="horizontal">
           <Button type="default" onClick={resetForm}>
             Reset
           </Button>
           <Button type="primary" onClick={onFinish}>
-            Save
+            Add
           </Button>
         </Space>
       </div>

@@ -7,9 +7,7 @@
 .todo-item {
   position: relative;
   padding: 0.5rem 2rem;
-  height: 100%;
   width: 100%;
-
   list-style: none;
   display: flex;
   flex-direction: row;
@@ -53,6 +51,9 @@
     align-items: flex-end;
     gap: 0.5rem;
     transition: all 0.3s ease-in-out;
+    border-radius: 1rem;
+    padding: 1rem;
+    background: #e0e0e0;
 
     .time {
       font-size: 1.4rem;
